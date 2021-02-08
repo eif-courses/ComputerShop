@@ -12,15 +12,31 @@ using namespace std;
 
 class Product {
 public:
-  Product(string t, string d, double p);
+  static int index;
+
+  Product(const string &title, const string &description, double price);
+
   string getTitle();
   string getDescription();
   double getPrice();
+  int getId();
+  int getQuantity();
+  void setQuantity(int value);
+  int getIndex();
+  void setIndex(int i);
+
+
 private:
   string title;
   string description;
   double price;
+  int id;
+  int quantity;
 };
+
+
+
+
 
 
 #endif //COMPUTERSHOP_PRODUCT_H
